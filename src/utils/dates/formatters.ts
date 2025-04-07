@@ -24,8 +24,10 @@ export const toDateTime = (input: InputDate): DateTime => {
   if (typeof input === 'string') return DateTime.fromISO(input);
   if (typeof input === 'number') return input > 1e10 ? DateTime.fromMillis(input) : DateTime.fromSeconds(input);
   if (input instanceof Date) return DateTime.fromJSDate(input);
-  if ('seconds' in input && 'nanoseconds' in input) return DateTime.fromSeconds(input.seconds);
-  throw new Error('Tipo de fecha no soportado');
+  if (typeof input === 'object' && input !== null && 'seconds' in input && 'nanoseconds' in input)
+    return DateTime.fromSeconds(input.seconds);
+
+  throw new Error(`Tipo de fecha no soportado: ${JSON.stringify(input)}`);
 };
 
 /**
