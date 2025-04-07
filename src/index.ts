@@ -1,6 +1,10 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('dev only output');
-  }
-  return a + b;
-};
+// utils
+
+//dates
+export * as planners from './utils/dates/planners';
+export * as formatters from './utils/dates/formatters';
+export * as calculations from './utils/dates/calculations';
+
+//services
+export * as FirebaseServices from './services/firebase/FirebaseService';
+export * as GooglePlacesServices from './services/google/GooglePlacesService';

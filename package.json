@@ -1,6 +1,6 @@
 {
   "name": "sevenapps-js-toolkit",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "JuanJP",
   "main": "dist/index.js",
@@ -49,10 +49,16 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.2.0",
     "@tsconfig/recommended": "^1.0.8",
+    "@types/luxon": "^3.6.2",
     "dts-cli": "^2.0.5",
     "husky": "^9.1.7",
     "size-limit": "^11.2.0",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "firebase": "^11.6.0",
+    "luxon": "^3.6.1"
   }
 }
