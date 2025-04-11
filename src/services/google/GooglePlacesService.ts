@@ -11,7 +11,7 @@ interface AutocompleteResult {
   predictions: string[];
 }
 
-class GooglePlacesService {
+export class GooglePlacesService {
   private api: AxiosInstance;
 
   constructor(private apiKey: string) {
@@ -93,4 +93,3 @@ class GooglePlacesService {
   }
 }
 
-export default GooglePlacesService;

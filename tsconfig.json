@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
+    "target": "ES6",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "target": "ESNext",
+    "outDir": "dist",
+    "declaration": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
