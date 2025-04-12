@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
-class ChatGPTService {
+export class ChatGPTService {
   private apiKey: string;
   private client: AxiosInstance;
   private apiUrl: string = 'https://api.openai.com/v1/completions';
@@ -74,5 +74,3 @@ class ChatGPTService {
     }
   }
 }
-
-export default ChatGPTService;
